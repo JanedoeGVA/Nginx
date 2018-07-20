@@ -6,4 +6,8 @@ sed -i "s|\${server_name}|$SERVER_NAME|" /etc/nginx/conf.d/nginx.conf
 
 sed -i "s|\${datavatar_api_url}|$DATAVATAR_API_URL|" /etc/nginx/conf.d/nginx.conf
 
+echo $DATAVATAR_API_URL
+
+cat /etc/nginx/conf.d/nginx.conf
+
 nginx -g 'daemon off;'
