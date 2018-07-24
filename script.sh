@@ -10,6 +10,7 @@ fi
 if [ ! -f /run/secrets/dhparam-test.pem ]; then
     echo -e "not present !!"
     openssl dhparam -out /run/secrets/dhparam-test.pem 2048
+    docker version
 fi
 
 chmod a+w /etc/nginx/conf.d/nginx.conf
