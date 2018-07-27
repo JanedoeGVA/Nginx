@@ -1,17 +1,5 @@
 #!/bin/bash
 
-if [ ! -f $DH_PARAM_OUT ]; then
-    echo "File not found!"
-else
-    echo "File found!"
-fi
-
-if [ ! -f /run/secrets/dhparam-test.pem ]; then
-    echo -e "not present !!"
-#openssl dhparam -out /run/secrets/dhparam-test.pem 2048
-    
-fi
-
 chmod a+w /etc/nginx/conf.d/nginx.conf
 
 sed -i "s|\${server_name}|$SERVER_NAME|" /etc/nginx/conf.d/nginx.conf
