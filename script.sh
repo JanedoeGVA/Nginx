@@ -3,7 +3,7 @@
 chmod a+w /etc/nginx/conf.d/nginx.conf
 
 sed -i "s|\${server_name}|$SERVER_NAME|" /etc/nginx/conf.d/nginx.conf
-sed -i "s|\${datavatar_api_url}|$DATAVATAR_API_URL|" /etc/nginx/conf.d/nginx.conf
+sed -i "s|\${general_consent_api_url}|$GENERAL_CONSENT_API_URL|" /etc/nginx/conf.d/nginx.conf
 sed -i "s|\${keycloak_api_url}|$KEYCLOAK_API_URL|" /etc/nginx/conf.d/nginx.conf
 sed -i "s|\${fullchain_pem}|$FULLCHAIN_PEM|" /etc/nginx/conf.d/nginx.conf
 sed -i "s|\${privkey_pem}|$PRIVKEY_PEM|" /etc/nginx/conf.d/nginx.conf
